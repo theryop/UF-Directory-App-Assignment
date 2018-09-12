@@ -26,11 +26,16 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
             "address": $scope.newAdd
       });
     };
-    $scope.deleteListing = function(index) {
-      $scope.listings.splice(index, 1);
+    $scope.deleteListing = function(listing) {
+      for (var i = 0; i <$scope.listings.length; i++)
+      {
+        if ($scope.listings[i].code == listing.code)
+        $scope.listings.splice(i, 1);
+      }
+
     };
-    $scope.showDetails = function(index) {
-      $scope.detailedInfo = $scope.listings[index];
+    $scope.showDetails = function(listing) {
+      $scope.detailedInfo = listing;
     };
   }
 ]);

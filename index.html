@@ -22,10 +22,10 @@
                 <th>Building Name</th>
                 <th>Delete?</th>                 
               </tr>
-              <tr ng-repeat="listing in listings | filter: barFilter(listing)" ng-click="showDetails($index)">
+              <tr ng-repeat="listing in listings | filter: barFilter(listing)" ng-click="showDetails(listing)">
                 <td>{{listing.code}} </td>
                 <td>{{listing.name}} </td>
-                <td><button ng-click="deleteListing($index)">Delete</button></td>  
+                <td><button ng-click="deleteListing(listing)">Delete</button></td>  
               </tr>
             </table>
           </div>

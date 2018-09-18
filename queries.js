@@ -1,6 +1,7 @@
 /* Fill out these functions using Mongoose queries*/
 
 var findLibraryWest = function() {
+  Listing.findOne()
   /* 
     Find the document that contains data corresponding to Library West,
     then log it to the console. 

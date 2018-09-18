@@ -19,6 +19,9 @@ describe('Listing Schema Unit Tests', function() {
 
   before(function(done) {
     mongoose.connect(config.db.uri);
+    setTimeout(function() {
+      mongoose.connection.close();
+    }, 1000);
     done();
   });
 
